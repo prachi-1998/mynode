@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    body{
+      background-color: cornflowerblue;
+    }
+    .li
+{
+	color:black;
+	font-size:20px;
+	display:inline-block;
+	text-decoration:none;
+}
+  </style>
+</head>
+<body>
+
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">WebSiteName</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li ><a href="/lo">logout</a></li>
+            <li ><a href="/wl">Dashboard</a></li>
+            <li class="active"><a href="/list">Item List</a></li>
+            <li><a href="#">Re-Add Items</a></li>
+          </ul>
+        </div>
+      </nav>
+
+
+    <div class="container">
+        <table style="width: 100%; border: 2px solid burlywood;">
+            <tr style="font-size: 24px;"><th>snakes</th><th>flavor</th><th>price</th><th>Edit</th><th>Delete</th></tr></br></br>
+            <% data.forEach(function(x)
+            {
+                %>
+                <tr style="font-size: 15px;"><td><%=x.snake %></td>
+                    <td><%=x.flavor %></td>
+                    <td><%=x.price %></td>
+                    <td> <a href="/edit?id=<%=x.id %>" class="li">Edit</a></td>
+                    <td> <a href="/del?id=<%=x.id %>" class="li">Delete</a></td>
+                </tr>
+            <%
+            })%>
+        </table>
+    </div>
+
+</body>
+</html>

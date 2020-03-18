@@ -1,0 +1,46 @@
+
+<head>
+   
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
+    <style>
+        body{
+             background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">WebSiteName</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li ><a href="/lo">logout</a></li>
+            <li ><a href="/wl">Dashboard</a></li>
+            <li><a href="/list">Item List</a></li>
+            <li class="active"><a href="#upload">Re-Add Items</a></li>
+          </ul>
+        </div>
+      </nav>
+
+
+
+    <div class="container" style="text-align: center;">
+    <h1>Edit your Menu Here:-</h1></br></br>
+    <form method="POST" action="/upload">
+     Id:<input type="text" name="t0" value="<%= data[0].id %>"></br></br>
+     snake:<input type="text" name="t1" value="<%= data[0].snake %>"></br></br>
+     flavor:<input type="text" name="t2" value="<%= data[0].flavor %>"></br></br>
+     price:<input type="text" name="t3" value="<%= data[0].price %>"></br></br>
+      <button type="submit">Click</button>
+      
+    </form>
+    </div>
+</body>
+</html>

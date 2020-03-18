@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+  body{
+    background-color: cornflowerblue;
+  }
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">WebSiteName</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li ><a href="/lo">logout</a></li>
+            <li class="active"><a href="/wl">Dashboard</a></li>
+            <li><a href="/list">Item List</a></li>
+            <li><a href="#">Re-Add Items</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div style="text-align: center;">
+        <h1>Add your Menu Here</h1></br></br></br></br>
+        <form action="/item" method="POST" >
+        
+          <label for="tos">Snakes:</label>
+          <input type="text" placeholder="Enter Type of Snake" name="t1"></br></br>
+          <label for="tof">Flavor:</label>
+          <input type="text" placeholder="Enter Type of flavor" name="t2"></br></br>
+          <label for="pos">Price:</label>
+          <input type="number" placeholder="Enter price of Snake" name="t3"></br></br>
+          <button type="submit">Submit</button>
+
+  
+          
+
+
+        </form>
+      </div>
+</body>
+</html>
